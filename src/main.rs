@@ -1,12 +1,11 @@
 use std::io;
-use ozymandias::functions;
 use ozymandias::user_calls;
 
 fn main() {
     let mut selection = String::new();
     let mut failed_attempts = 0;
     
-    functions::begin_introductions();
+    user_calls::begin_introductions();
 
     io::stdin()
         .read_line(&mut selection)
