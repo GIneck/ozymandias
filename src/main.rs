@@ -3,8 +3,7 @@ use ozymandias::user_calls;
 
 fn main() {
     let mut selection = String::new();
-    let mut failed_attempts = 0;
-    
+        
     user_calls::begin_introductions();
 
     io::stdin()
@@ -15,16 +14,12 @@ fn main() {
 
     match selection {
 
+//        0 => break,
         1 => user_calls::user_factorial(),
         2 => user_calls::user_fibonacchi(),
-        _ => {failure_to_comply(failed_attempts); failed_attempts += 1;}
+
+        _ => println!("Give me a proper selection please")
 
     }
-}
 
-fn failure_to_comply(attempts: i8) {
-    match attempts {
-        0 => println!("Hey, out of bounds inputs make me agitated. "),
-        _ => println!("Very well") //TODO fix
-    }
 }

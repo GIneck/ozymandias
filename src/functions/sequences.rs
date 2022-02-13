@@ -1,6 +1,6 @@
-pub fn factorial(input: u8) -> u128{
+pub fn factorial(input: u8) -> u128 {
     let mut counter = input as u128;
-    let mut output: u128 = 0;
+    let mut output: u128 = 1;
 
     while counter > 1 {
 
@@ -11,14 +11,18 @@ pub fn factorial(input: u8) -> u128{
     output
 }
 
-fn fibonacchi(term: u8) -> u128 {
+pub fn fibonacchi(term: u8) -> u128 {
     let mut counter = term;
-    let mut output = 1;
-    let mut previous;
+    let mut output = 0;
+    let mut latter = 0;
+    let mut former = 1;
 
-    while counter != 0 {
-        previous = output;
-        output += previous;
+    while counter > 0 {
+
+        output = latter + former;
+        former = latter;
+        latter = output;
+
         counter -= 1;
     }
 
