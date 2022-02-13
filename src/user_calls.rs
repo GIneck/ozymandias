@@ -1,6 +1,5 @@
 use std::io;
 
-
 pub fn user_factorial(){
 
     println!();
