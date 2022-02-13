@@ -1,4 +1,4 @@
-pub fn factorial(input: u8) -> u128 {
+pub fn factorial(input: u8) -> u128 { //works to 128 inclusive
     let mut counter = input as u128;
     let mut output: u128 = 1;
 
