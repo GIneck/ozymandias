@@ -1,10 +1,10 @@
 use std::io;
-
+use std::error::Error;
 pub fn user_factorial(){
 
     println!();
     
-    println!("Hi, I am a Doctorial student studying factorials. If you give an integer, I will give you that factorial.");
+    println!("Hi, I am a Doctoral student studying factorials. If you give an integer, I will give you that factorial.");
 
     let mut user_input = String::new();
 
@@ -16,7 +16,9 @@ pub fn user_factorial(){
 
         Ok(num) => num,
 
-        Err(_) => println!("yea, no")
+        Err(error) => match error.kind() {
+            ErrorKind::IntErrorKind => -1
+        }
 
     };
 
@@ -122,7 +124,7 @@ pub fn begin_introductions() {
 
     println!();
 
-    println!("Doctorial Factorials");
+    println!("Doctoral Factorials");
 
     println!("The Foggy Fibonacci");
 

@@ -1,10 +1,10 @@
 use std::io;
-use ozymandias::user_calls;
+use crate::user_interface;
 
 fn main() {
     let mut input = String::new();
         loop {
-            user_calls::begin_introductions();
+            crate::user_interface::begin_introductions();
 
     io::stdin()
         .read_line(&mut input)
@@ -15,8 +15,8 @@ fn main() {
     match selection {
 
         0 => break,
-        1 => user_calls::user_factorial(),
-        2 => user_calls::user_fibonacchi(),
+        1 => user_interface::user_factorial(),
+        2 => user_interface::user_fibonacchi(),
 
         _ => println!("Give me a proper selection please")
 
