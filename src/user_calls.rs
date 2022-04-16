@@ -12,7 +12,15 @@ pub fn user_factorial(){
         .read_line(&mut user_input)
         .expect("Failed to read line");
 
-    let fn_input: u8 = user_input.trim().parse().expect("Please type an Integer");
+    let fn_input = match user_input.trim().parse::<u8>() {
+
+        Ok(num) => num,
+
+        Err(_) => println!("yea, no")
+
+    };
+
+    
 
     println!("{}! is equal to: {}", fn_input, crate::functions::sequences::factorial(fn_input));
 

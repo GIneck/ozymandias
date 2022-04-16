@@ -4,7 +4,7 @@ use ozymandias::user_calls;
 fn main() {
     let mut input = String::new();
         loop {
-    user_calls::begin_introductions();
+            user_calls::begin_introductions();
 
     io::stdin()
         .read_line(&mut input)
