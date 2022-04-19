@@ -1,5 +1,4 @@
 use std::io;
-use std::error::Error;
 pub fn user_factorial(){
 
     println!();
@@ -16,10 +15,7 @@ pub fn user_factorial(){
 
         Ok(num) => num,
 
-        Err(error) => match error.kind() {
-            ErrorKind::IntErrorKind => -1
-        }
-
+        Err(error) => panic!("Input failed, expected integer, got {}. Trace: {}",user_input, error)
     };
 
     
