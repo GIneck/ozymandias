@@ -89,7 +89,7 @@ pub fn user_fibonacchi() {
 
         if s.contains("yes") | s.contains("y") {
             
-            user_factorial();
+            user_fibonacchi();
         
         } else if s.contains("no") | s.contains("n") {
 
