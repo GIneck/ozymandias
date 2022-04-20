@@ -1,5 +1,5 @@
 use std::io;
-use crate::user_interface;
+use ozymandias::user_interface;
 
 fn main() {
     let mut input = String::new();
